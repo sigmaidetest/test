@@ -1,1 +1,88 @@
-{"EDITOR_STATE":{"allProjectFiles":{"acee9a51-7d31-4cf6-88bc-5bd3e230f3c0":{"id":"acee9a51-7d31-4cf6-88bc-5bd3e230f3c0","parent":null,"name":"test","type":"DIRECTORY","isDirectory":true,"children":["f710cf07-ed7d-41a7-99a4-16ba27fa81ee"],"isRemovable":false,"filePath":"test"},"f710cf07-ed7d-41a7-99a4-16ba27fa81ee":{"id":"f710cf07-ed7d-41a7-99a4-16ba27fa81ee","parent":"acee9a51-7d31-4cf6-88bc-5bd3e230f3c0","name":"lambda.js","type":"LAMBDA_FILE","isDirectory":false,"children":[],"isRemovable":true,"filePath":"test/lambda.js","code":"let AWS = require('aws-sdk');\nconst sns = new AWS.SNS();\nexports.handler = function (event, context, callback) {\n\n\tsns.unsubscribe({\n\t\tSubscriptionArn: 'arn:aws:sns:us-east-1:480964559519:ADRT:123444'\n\t}).promise()\n\t\t.then(data => {\n\t\t\t// your code goes here\n\t\t})\n\t\t.catch(err => {\n\t\t\t// error handling goes here\n\t\t});\n\n\n\n\tcallback(null, 'Successfully executed');\n}","resources":["snsusEast1ADRT"],"triggers":[]}},"rootNode":"acee9a51-7d31-4cf6-88bc-5bd3e230f3c0","openFiles":["f710cf07-ed7d-41a7-99a4-16ba27fa81ee"],"currentFileId":"f710cf07-ed7d-41a7-99a4-16ba27fa81ee","resources":{"snsusEast1ADRT":{"name":"snsusEast1ADRT","type":"SNS","config":{"topicMode":1,"topicName":"ADRT","topicArn":"arn:aws:sns:us-east-1:480964559519:ADRT","topicRegion":"us-east-1","snsType":0,"subscriptions":[]},"globallyEditable":true,"usage":{"f710cf07-ed7d-41a7-99a4-16ba27fa81ee":{"operations":{"unsubscribe":[{"SubscriptionArn":"arn:aws:sns:us-east-1:480964559519:ADRT:123444"}]},"occurrence":1,"triggers":[]}}}},"packageJSON":{"dependencies":{"aws-sdk":{"name":"aws-sdk","version":"2.176.0","notRemovable":true},"slappforge-sdk":{"name":"@slappforge/slappforge-sdk","version":"0.0.3","notRemovable":true}}},"lambdaId":"f710cf07-ed7d-41a7-99a4-16ba27fa81ee","changeExistingProject":false,"additionalFiles":[]},"PROJECT_META":{"projectName":"test","projectDescription":"test","projectVersion":"1.0.0","repoName":"test","repoUrl":"https://github.com/sigmaidetest/test","lastSave":1517220620663}}
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "8e5ba497-84c3-4a8d-8ee5-3a8a5a144681": {
+        "id": "8e5ba497-84c3-4a8d-8ee5-3a8a5a144681",
+        "parent": null,
+        "name": "Test",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "978a7b17-2bcd-4fe5-95ad-e9cb254bae57",
+          "6c562946-5ccd-4f71-9b0a-f3b8c7bf701b"
+        ],
+        "isRemovable": false,
+        "filePath": "Test"
+      },
+      "978a7b17-2bcd-4fe5-95ad-e9cb254bae57": {
+        "id": "978a7b17-2bcd-4fe5-95ad-e9cb254bae57",
+        "parent": "8e5ba497-84c3-4a8d-8ee5-3a8a5a144681",
+        "name": "lambda.js",
+        "type": "LAMBDA_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "Test/lambda.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "triggers": [],
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        }
+      },
+      "6c562946-5ccd-4f71-9b0a-f3b8c7bf701b": {
+        "id": "6c562946-5ccd-4f71-9b0a-f3b8c7bf701b",
+        "parent": "8e5ba497-84c3-4a8d-8ee5-3a8a5a144681",
+        "name": "sub1",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "Test/sub1"
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "8e5ba497-84c3-4a8d-8ee5-3a8a5a144681",
+    "openFiles": [
+      "978a7b17-2bcd-4fe5-95ad-e9cb254bae57"
+    ],
+    "currentFileId": "978a7b17-2bcd-4fe5-95ad-e9cb254bae57",
+    "resources": {},
+    "customTemplate": {
+      "dialect": null,
+      "definitions": {}
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "Test",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1553765981490
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "Test",
+      "url": "https://github.com/sigmaidetest/Test"
+    }
+  }
+}
