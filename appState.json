@@ -39,17 +39,31 @@
         "name": "sub1",
         "type": "DIRECTORY",
         "isDirectory": true,
-        "children": [],
+        "children": [
+          "e561e4ad-02bb-48d8-83ae-899ae8240462"
+        ],
         "isRemovable": true,
         "filePath": "Test/sub1"
+      },
+      "e561e4ad-02bb-48d8-83ae-899ae8240462": {
+        "id": "e561e4ad-02bb-48d8-83ae-899ae8240462",
+        "parent": "6c562946-5ccd-4f71-9b0a-f3b8c7bf701b",
+        "name": "data.json",
+        "type": "JSON_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "Test/sub1/data.json",
+        "code": ""
       }
     },
     "deletedFiles": [],
     "rootNode": "8e5ba497-84c3-4a8d-8ee5-3a8a5a144681",
     "openFiles": [
-      "978a7b17-2bcd-4fe5-95ad-e9cb254bae57"
+      "978a7b17-2bcd-4fe5-95ad-e9cb254bae57",
+      "e561e4ad-02bb-48d8-83ae-899ae8240462"
     ],
-    "currentFileId": "978a7b17-2bcd-4fe5-95ad-e9cb254bae57",
+    "currentFileId": "e561e4ad-02bb-48d8-83ae-899ae8240462",
     "resources": {},
     "customTemplate": {
       "dialect": null,
@@ -76,7 +90,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1553765981490
+    "lastSave": 1553766018416
   },
   "VCS_STATE": {
     "provider": "GitHub",
